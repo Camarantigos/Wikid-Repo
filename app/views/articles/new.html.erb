@@ -1,5 +1,14 @@
 <h1> Create a Code Wiki</h1>
 
+<% if @article.errors.any? %>
+<h2>You didn't get the how to email??? </h2>
+<ul>
+  <% @article.errors.full_messages.each do |msg| %>
+  <li><%= msg %></li>
+  <% end %>
+</ul>
+<% end %>
+
 <%= form_for @article do |f| %>
   <p>
     <%= f.label :title %></br>
