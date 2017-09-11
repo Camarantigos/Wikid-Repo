@@ -45,3 +45,20 @@ $navbar-default-bg: #008B8B;
   transition: 1s;
 
 }
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 2px solid #eaeaea;
+  color: #777;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {}
