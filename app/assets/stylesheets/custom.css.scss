@@ -1,2 +1,47 @@
+$navbar-default-bg: #008B8B;
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+#logo {
+  float: left;
+  font-size: 1.7em;
+  color: #f3f3f3;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color: #f3f3f3;
+  text-decoration: none;
+
+}
+
+.center {
+  text-align: center;
+}
+
+.jumbotron {
+  background-image: asset-url('ruby2.jpg');
+  background-size: cover;
+  height: 650px;
+  color: #f3f3f3;
+  line-height: 14.8;
+}
+
+.jumbotron h1 {
+  line-height: 5.9;
+
+}
+
+.jumbotron h2 {
+  line-height: 0;
+
+}
+
+.btn-xlarge {
+  font-size: 1.7em;
+  background-color: black;
+  transition: 1s;
+
+}
