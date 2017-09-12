@@ -1,7 +1,9 @@
-$navbar-default-bg: #008B8B;
+$navbar-default-bg: #ce8714;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+
 
 #logo {
   float: left;
@@ -61,4 +63,15 @@ footer small {
   float: left;
 }
 
-footer ul {}
+footer ul {
+  float: right;
+  list-style: none;
+  text-decoration: none;
+}
+
+footer ul li {
+  float: left;
+  list-style: none;
+  margin-left: 15px;
+  text-decoration: none;
+}
