@@ -1,9 +1,24 @@
-<h1>Take it!!!</h1>
+<h2 align="center">Code Title: <%= @article.title %> </h2>
+<div class="well col-xs-8 col-xs-offset-2">
+  <h4 class="center"><strong>Description:</strong></h4>
+  <hr>
+  
+  <pre>
+    <code>
+      <%= @article.description %> 
+    </code>
+    <button data-copytarget="#website">Copy</button>
+  </pre>
+  
+    <br>
+    
+  <div class="article-actions center">
 
-<p>Title: <%= @article.title %> </p>
+    <p>PhP my ass!!!</p>
+    <%= link_to "See mistakes? Edit the code now!!!", edit_article_path(@article), class: "btn btn-xs btn-warning" %> | 
+    <%= link_to "Delete This!!!", article_path(@article), method: :delete, data: { confirm: "Are you sure? You really want to delete this code???"}, class: "btn btn-xs btn-danger" %> | 
+    <%= link_to "Back to da list", articles_path, class: "btn btn-xs btn-info" %>
+    
+  </div>
 
-<p>Description: <%= @article.description %> </p>
-
-<p>PhP my ass!!!</p>
-<%= link_to "See mistakes? Edit the code now!!!", edit_article_path(@article) %> </br>
-<%= link_to "Back to da list", articles_path %>
+</div>
