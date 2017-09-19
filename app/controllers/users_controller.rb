@@ -13,9 +13,25 @@ class UsersController < ApplicationController
     end
   end
   
+  def edit
+    @user = User.find(params[:id])
+  end
+  
+  def update
+    @user = User.find(params[:id])
+    if @user.update(user_params)
+      flash[:success] = "Good Job!!! now wipe that crap of the monitor!!!"
+      redirect_to articles_path
+    else
+      render 'edit'
+    end
+    
+  end  
+  
   private
   def user_params
     params.require(:user).permit(:username, :email, :password)
   end
+  
   
 end
