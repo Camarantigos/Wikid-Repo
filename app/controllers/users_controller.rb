@@ -21,11 +21,12 @@ class UsersController < ApplicationController
   end
   
   def edit
+  
   end
   
   def update
     if @user.update(user_params)
-      flash[:success] = "Good Job!!! now wipe that crap of the monitor!!!"
+      flash[:success] = "Good Job #{@user.username}!!! now wipe that crap of the monitor!!!"
       redirect_to articles_path
     else
       render 'edit'

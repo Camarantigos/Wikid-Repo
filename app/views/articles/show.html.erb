@@ -25,8 +25,8 @@
     <br>
     
   <div class="article-actions center">
-    <% if logged_in? && current_user == @article.user %>
-    <p>PhP my ass!!!</p>
+    <% if logged_in? && (current_user == @article.user || current_user.admin?) %>
+      <p>PhP my ass!!!</p>
       <%= link_to "See mistakes? Edit the code now!!!", edit_article_path(@article), class: "btn btn-xs btn-warning" %> | 
       <%= link_to "Delete This!!!", article_path(@article), method: :delete, data: { confirm: "Are you sure? You really want to delete this???"}, class: "btn btn-xs btn-danger" %> | 
     <% end %>

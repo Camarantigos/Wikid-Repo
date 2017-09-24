@@ -11,7 +11,7 @@
         <small>Created by: <%= article.user.username if article.user %>, <%= time_ago_in_words(article.created_at) %> ago, Last updated: <%= time_ago_in_words(article.updated_at)%> ago</small>
         </div>
       </div>
-      <% if logged_in? && current_user == article.user %>
+      <% if logged_in? && (current_user == article.user || current_user.admin?) %>
         <div class="article-actions center">
           <%= link_to "Edit the code now!!!", edit_article_path(article), class: "btn btn-xs btn-warning" %> | 
           <%= link_to "Delete This!!!", article_path(article), method: :delete, data: { confirm: "Are you sure? You really want to delete this code???"}, class: "btn btn-xs btn-danger" %>
