@@ -25,12 +25,12 @@
     <br>
     
   <div class="article-actions center">
-
+    <% if logged_in? && current_user == @article.user %>
     <p>PhP my ass!!!</p>
-    <%= link_to "See mistakes? Edit the code now!!!", edit_article_path(@article), class: "btn btn-xs btn-warning" %> | 
-    <%= link_to "Delete This!!!", article_path(@article), method: :delete, data: { confirm: "Are you sure? You really want to delete this code???"}, class: "btn btn-xs btn-danger" %> | 
+      <%= link_to "See mistakes? Edit the code now!!!", edit_article_path(@article), class: "btn btn-xs btn-warning" %> | 
+      <%= link_to "Delete This!!!", article_path(@article), method: :delete, data: { confirm: "Are you sure? You really want to delete this???"}, class: "btn btn-xs btn-danger" %> | 
+    <% end %>
     <%= link_to "Back to da list", articles_path, class: "btn btn-xs btn-info" %>
-    
   </div>
 
 </div>
