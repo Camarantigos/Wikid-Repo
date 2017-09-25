@@ -1,12 +1,12 @@
 require 'test_helper'
 
-class CreateCategoriesTest < ActionDispatch::IntegrationTest
+class ListCategoriesTest < ActionDispatch::IntegrationTest
   def setup
-    @category = Category.create(name: "Notes")
+    @category = Category.create(name: "Jscript")
     @category2 = Category.create(name: "Ruby")
   end
   
-  test "should show cats listing" do
+  test "should show categories listing" do
     get categories_path
     assert_template 'categories/index'
     assert_select "a[href=?]", category_path(@category), text: @category.name

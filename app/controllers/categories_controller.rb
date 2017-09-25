@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
   def new
-    @category = Category.all
+    @category = Category.new
   end
   
   def create
@@ -15,7 +15,7 @@ class CategoriesController < ApplicationController
   end
   
   def index
-    @categories = Category.paginate(page: params[:page], per_page:5)
+   @categories = Category.paginate(page: params[:page], per_page: 5)
   end
   
   def show
