@@ -7,6 +7,9 @@
         <li><%= link_to gravatar_for(user), user_path(user) %></li>
         <li class="article-title"><%= link_to user.username, user_path(user) %></li>
         <li><small><%= pluralize(user.articles.count, "code") if user.articles %></small></li>
+        <% if logged_in? && current_user.admin? %>
+          <li><%= link_to "Kill HIM!!!", user_path(user), method: :delete, data:{ confirm: "You are about to delete this Untouchable and all his contributions to WIKID... Are you sure about that MASTA???"} %></li>
+        <% end %>
       </div>
     </div>
   </ul>
