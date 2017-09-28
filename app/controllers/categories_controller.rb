@@ -1,5 +1,10 @@
 class CategoriesController < ApplicationController
   before_action :require_admin, except: [:index, :show]
+  
+  def index
+    @categories = Category.paginate(page: params[:page], per_page: 5)
+  end
+  
   def new
     @category = Category.new
   end
@@ -10,13 +15,9 @@ class CategoriesController < ApplicationController
       flash[:success] = "New Category created successfully"
       redirect_to categories_path
     else
-      render 'new'  
+      render 'new'
     end
     
-  end
-  
-  def index
-   @categories = Category.paginate(page: params[:page], per_page: 5)
   end
   
   def show
