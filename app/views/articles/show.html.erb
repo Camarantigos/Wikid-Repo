@@ -23,7 +23,9 @@
   </pre>
   
     <br>
-    
+  <% if@article.categories.any? %>
+    <p>Categories: <%= render @article.categories %></p>
+  <% end %>
   <div class="article-actions center">
     <% if logged_in? && (current_user == @article.user || current_user.admin?) %>
       <p>PhP my ass!!!</p>

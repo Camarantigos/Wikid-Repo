@@ -328,3 +328,14 @@ footer ul li {
   list-style: none;
   padding-left: 0;
 }
+
+.badge {
+  background-color: #1fbfd1;
+  letter-spacing: -1px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.input_checkbox input {
+  width: auto !important;
+}
